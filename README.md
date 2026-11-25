@@ -63,7 +63,7 @@ Para gerar novamente:
 javadoc -private -encoding UTF-8 -docencoding UTF-8 -charset UTF-8 -d docs -sourcepath src -author -version calculadora
 ```
 
-![Página inicial do JavaDoc](prints/javadoc.png)
+![Página inicial do JavaDoc (resumo do pacote)](prints/javadoc.png)
 
 ![Documentação do método calc](prints/javadoc-calculadora.png)
 
