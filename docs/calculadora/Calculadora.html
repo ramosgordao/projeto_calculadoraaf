@@ -90,10 +90,11 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Calculadora</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Calculadora de operações matemáticas básicas.</div>
+<div class="block">Calculadora de operações matemáticas básicas.
+ Versão refatorada com métodos separados para cada operação.</div>
 <dl class="notes">
 <dt>Version:</dt>
-<dd>1.0</dd>
+<dd>2.0</dd>
 <dt>Author:</dt>
 <dd>Aluno</dd>
 </dl>
@@ -131,7 +132,31 @@ loadScripts(document, 'script');</script>
  int&nbsp;b,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Realiza uma operação entre dois números inteiros.</div>
+<div class="block">Escolhe e executa uma operação entre dois números inteiros.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dividir(int,int)" class="member-name-link">dividir</a><wbr>(int&nbsp;primeiro,
+ int&nbsp;segundo)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Divide o primeiro número pelo segundo.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#multiplicar(int,int)" class="member-name-link">multiplicar</a><wbr>(int&nbsp;primeiro,
+ int&nbsp;segundo)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Multiplica dois números.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#somar(int,int)" class="member-name-link">somar</a><wbr>(int&nbsp;primeiro,
+ int&nbsp;segundo)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Soma dois números.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#subtrair(int,int)" class="member-name-link">subtrair</a><wbr>(int&nbsp;primeiro,
+ int&nbsp;segundo)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Subtrai o segundo número do primeiro.</div>
 </div>
 </div>
 </div>
@@ -171,7 +196,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">calc</span><wbr><span class="parameters">(int&nbsp;a,
  int&nbsp;b,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;op)</span></div>
-<div class="block">Realiza uma operação entre dois números inteiros.</div>
+<div class="block">Escolhe e executa uma operação entre dois números inteiros.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>a</code> - primeiro número</dd>
@@ -182,6 +207,68 @@ loadScripts(document, 'script');</script>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - se a operação for inválida</dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/ArithmeticException.html" title="class or interface in java.lang" class="external-link">ArithmeticException</a></code> - se houver divisão por zero</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="somar(int,int)">
+<h3>somar</h3>
+<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">somar</span><wbr><span class="parameters">(int&nbsp;primeiro,
+ int&nbsp;segundo)</span></div>
+<div class="block">Soma dois números.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>primeiro</code> - primeiro número</dd>
+<dd><code>segundo</code> - segundo número</dd>
+<dt>Returns:</dt>
+<dd>soma dos números</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="subtrair(int,int)">
+<h3>subtrair</h3>
+<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">subtrair</span><wbr><span class="parameters">(int&nbsp;primeiro,
+ int&nbsp;segundo)</span></div>
+<div class="block">Subtrai o segundo número do primeiro.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>primeiro</code> - primeiro número</dd>
+<dd><code>segundo</code> - segundo número</dd>
+<dt>Returns:</dt>
+<dd>diferença dos números</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="multiplicar(int,int)">
+<h3>multiplicar</h3>
+<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">multiplicar</span><wbr><span class="parameters">(int&nbsp;primeiro,
+ int&nbsp;segundo)</span></div>
+<div class="block">Multiplica dois números.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>primeiro</code> - primeiro número</dd>
+<dd><code>segundo</code> - segundo número</dd>
+<dt>Returns:</dt>
+<dd>produto dos números</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="dividir(int,int)">
+<h3>dividir</h3>
+<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">dividir</span><wbr><span class="parameters">(int&nbsp;primeiro,
+ int&nbsp;segundo)</span></div>
+<div class="block">Divide o primeiro número pelo segundo.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>primeiro</code> - dividendo</dd>
+<dd><code>segundo</code> - divisor</dd>
+<dt>Returns:</dt>
+<dd>resultado da divisão</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/ArithmeticException.html" title="class or interface in java.lang" class="external-link">ArithmeticException</a></code> - se o divisor for zero</dd>
 </dl>
 </section>
 </li>

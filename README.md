@@ -47,7 +47,7 @@ java -cp bin calculadora.TesteCalculadora
 
 Os testes comparam automaticamente a entrada, o resultado esperado e o resultado obtido. Nos casos de erro, comparam o tipo da exceção e sua mensagem. Caso algum teste falhe, a execução dos testes termina com `AssertionError`. Os sete casos são soma, subtração, multiplicação, divisão, divisão por zero, operação inválida e divisão decimal.
 
-Resultado da execução nesta branch: **7 aprovados e 0 reprovados**.
+Resultado após a refatoração: **7 aprovados e 0 reprovados** (os mesmos testes da branch `main`).
 
 ![Execução dos testes](prints/testes.png)
 
