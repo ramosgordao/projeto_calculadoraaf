@@ -2,7 +2,7 @@ package calculadora;
 
 /**
  * Testes unitários simples da classe Calculadora, sem bibliotecas externas.
- * @author Aluno
+ * @author Gabriel Chinaglia 251064
  * @version 1.0
  */
 public class TesteCalculadora {
@@ -104,3 +104,5 @@ public class TesteCalculadora {
         }
     }
 }
+
+//  * @author Gabriel Chinaglia 251064

@@ -2,7 +2,7 @@ package calculadora;
 
 /**
  * Calculadora de operações matemáticas básicas.
- * @author Aluno
+ * @author Gabriel Chinaglia 251064
  * @version 1.0
  */
 public class Calculadora {
@@ -21,21 +21,25 @@ public class Calculadora {
      * @throws ArithmeticException se houver divisão por zero
      */
     public double calc(int a, int b, String op) {
-        if ("+".equals(op)) {
-            return (double) a + b;
-        } else if ("-".equals(op)) {
-            return (double) a - b;
-        } else if ("*".equals(op)) {
-            return (double) a * b;
-        } else if ("/".equals(op)) {
-            // Não permite dividir por zero.
-            if (b == 0) {
-                throw new ArithmeticException("Não é possível dividir por zero.");
+        switch (op) {
+            case "+" -> {
+                return (double) a + b;
             }
-            // Converte para double para permitir resultados com casas decimais.
-            return (double) a / b;
-        } else {
-            throw new IllegalArgumentException("Operação inválida.");
+            case "-" -> {
+                return (double) a - b;
+            }
+            case "*" -> {
+                return (double) a * b;
+            }
+            case "/" -> {
+                if (b == 0) {
+                    throw new ArithmeticException("Não é possível dividir por zero.");
+                }
+                return (double) a / b;
+            }
+            default -> throw new IllegalArgumentException("Operação inválida.");
         }
     }
 }
+
+// * @author Gabriel Chinaglia 251064

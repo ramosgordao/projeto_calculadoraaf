@@ -84,6 +84,6 @@ Para mudar de branch:
 git switch Refatoracao
 ```
 
-## Link do repositório
+## Link do repositório: https://github.com/ramosgordao/projeto_calculadoraaf
 
-Pendente de publicação: substitua esta linha pelo link real do repositório GitHub após o envio das duas branches.
+
