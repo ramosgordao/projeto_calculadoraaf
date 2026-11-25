@@ -9,6 +9,10 @@ import java.util.Scanner;
  */
 public class Main {
 
+    /** Impede a criação de objetos da classe Main. */
+    private Main() {
+    }
+
     /**
      * Solicita números e operações até que o usuário escolha sair.
      * @param args argumentos da linha de comando (não utilizados)

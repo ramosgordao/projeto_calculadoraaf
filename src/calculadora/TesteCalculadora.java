@@ -7,6 +7,10 @@ package calculadora;
  */
 public class TesteCalculadora {
 
+    /** Impede a criação de objetos da classe de testes. */
+    private TesteCalculadora() {
+    }
+
     /** Quantidade de testes aprovados. */
     private static int aprovados = 0;
 

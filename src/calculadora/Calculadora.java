@@ -7,6 +7,10 @@ package calculadora;
  */
 public class Calculadora {
 
+    /** Cria uma calculadora. */
+    public Calculadora() {
+    }
+
     /**
      * Realiza uma operação entre dois números inteiros.
      * @param a primeiro número
